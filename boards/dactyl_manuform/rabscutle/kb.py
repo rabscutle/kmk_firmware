@@ -22,12 +22,12 @@ class KMKKeyboard(_KMKKeyboard):
         pins[avr['GP23']],
         pins[avr['GP21']]
     )
-    diode_orientation = DiodeOrientation.ROWS
+    diode_orientation = DiodeOrientation.COLUMNS
     data_pin = pins[avr['D0']]
     # data_pin2 =
     # rgb_pixel_pin = pins[avr['D3']]
     # num_pixels = 12
-    
+
     # flake8: noqa
     # fmt: off
     coord_mapping = [
@@ -37,4 +37,4 @@ class KMKKeyboard(_KMKKeyboard):
                 20, 21,                           51, 50,
         24, 25, 26, 27, 28, 29,           57, 56, 55, 54, 53, 52
     ]
-    
+
