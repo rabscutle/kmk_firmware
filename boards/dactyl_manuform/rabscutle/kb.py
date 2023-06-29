@@ -1,29 +1,31 @@
 import board
 
 from kmk.kmk_keyboard import KMKKeyboard as _KMKKeyboard
-from kmk.quickpin.pro_micro.avr_promicro import translate as avr
-from kmk.quickpin.pro_micro.boardsource_blok import pinout as pins
+#from kmk.quickpin.pro_micro.avr_promicro import translate as avr
+#from kmk.quickpin.pro_micro.boardsource_blok import pinout as pins
 from kmk.scanners import DiodeOrientation
 
 
 class KMKKeyboard(_KMKKeyboard):
     row_pins = (
-        pins[avr['GP04']],
-        pins[avr['GP05']],
-        pins[avr['GP06']],
-        pins[avr['GP07']],
-        pins[avr['GP08']],
-        pins[avr['GP09']]
+        #pins[avr['GP04']],
+        #pins[avr['GP05']],
+        #pins[avr['GP06']],
+        #pins[avr['GP07']],
+        #pins[avr['GP08']],
+        #pins[avr['GP09']]
+        board.GP04, board.GP05, board.GP06, board.GP07, board.GP08, board.GP09
     )
     col_pins = (
-        pins[avr['GP26']],
-        pins[avr['GP22']],
-        pins[avr['GP20']],
-        pins[avr['GP23']],
-        pins[avr['GP21']]
+        #pins[avr['GP26']],
+        #pins[avr['GP22']],
+        #pins[avr['GP20']],
+        #pins[avr['GP23']],
+        #pins[avr['GP21']]
+        board.GP26, board.GP22, board.GP20, board.GP23, board.GP21
     )
-    diode_orientation = DiodeOrientation.COLUMNS
-    data_pin = pins[avr['GP04']]
+    diode_orientation = DiodeOrientation.ROWS
+    data_pin = board.TX
     # data_pin2 =
     # rgb_pixel_pin = pins[avr['D3']]
     # num_pixels = 12
