@@ -60,21 +60,21 @@ SCCAP   = KC.LCTL(KC.PSCR)
 
 
 # Strings
-CURPASS     = send_string("youdontneedAhat#23")
-HANGMANL    = send_string("Yo$D0ntN3#d_Hat2bAC0wb0y")
-HANGMANU    = send_string("yO$d0NTn3#D_hAT2Bac0WB0Y")
-UID         = send_string("s009866")
-OWSH        = send_string("0th3RW0rld$")
-OWTT        = send_string("0th3RW0rld$ThanTh#s3")
-OWTTU       = send_string("0TH3rw0RLD$tHANtH#S3")
-WKPAUG      = send_string("we3k8p@ug")
-TEAMCT      = send_string("T#AmCT4l1F3")
-MYEMAIL     = send_string("patrick.henson@standard.com")
-RABSC       = send_string("rabscutle")
-EPPS        = send_string("Monday#1")
-PKH         = send_string("pkhtexas@yahoo.com")
-OLDPASS     = send_string("FuckingSickOfDust#23")
-OLDPASS2    = send_string("SpicyPidg30#")
+CURPASS     = send_string("CURPASS")
+HANGMANL    = send_string("HANGMANL")
+HANGMANU    = send_string("HANGMANU")
+UID         = send_string("UID")
+OWSH        = send_string("OWSH")
+OWTT        = send_string("OWTT")
+OWTTU       = send_string("OWTTU")
+WKPAUG      = send_string("WKPAUG")
+TEAMCT      = send_string("TEAMCT")
+MYEMAIL     = send_string("MYEMAIL")
+RABSC       = send_string("RABSC")
+EPPS        = send_string("EPPS")
+PKH         = send_string("PKH")
+OLDPASS     = send_string("OLDPASS")
+OLDPASS2    = send_string("OLDPASS2")
 
 # Keymaps
 keyboard.keymap = [
@@ -114,3 +114,4 @@ keyboard.keymap = [
         CURPASS,    UID,        MYEMAIL,    RABSC,      HANGMANU,   HANGMANL,           KC.TRNS,    KC.TRNS,    KC.TRNS,    KC.TRNS,    KC.TRNS,    KC.TRNS
     ],
 ]
+print('Hello')
