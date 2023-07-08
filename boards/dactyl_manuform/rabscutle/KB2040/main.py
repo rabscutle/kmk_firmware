@@ -1,16 +1,20 @@
-from kb import KMKKeyboard
+from kb import MyKeyboard
 
 from kmk.keys import KC
-from kb import data_pin
+
+from kmk.modules.layers import Layers
 from kmk.modules.split import Split, SplitSide
 from kmk.modules.holdtap import HoldTap
-from kmk.modules.layers import Layers
+from kmk.extensions.media_keys import MediaKeys
 from kmk.handlers.sequences import send_string
 
-keyboard = KMKKeyboard()
+keyboard = MyKeyboard()
+
 
 keyboard.modules.append(Layers())
 keyboard.modules.append(HoldTap())
+keyboard.extensions.append(MediaKeys())
+
 
 split = Split(split_side=SplitSide.LEFT)
 keyboard.modules.append(split)
@@ -19,6 +23,7 @@ keyboard.modules.append(split)
 QWY  = KC.DF(0)
 CDH  = KC.DF(1)
 LWR  = KC.MO(2)
+RSE  = KC.MO(3)
 RSE  = KC.MO(3)
 ADJ  = KC.MO(4)
 LWRL = KC.LT(2, KC.SPC, prefer_hold=True, tap_interrupted=False, tap_time=250)
@@ -31,26 +36,26 @@ SHCAP = KC.HT(KC.CAPS,KC.LSFT)
 SHSPC = KC.HT(KC.SPC, KC.LSFT)
 
 # CTL Hotkeys
-ALTF4   = KC.LALT(KC.F4)
-CTA     = KC.LCTL(KC.A)
-CTS     = KC.LCTL(KC.S)
-CTX     = KC.LCTL(KC.X)
-CTC     = KC.LCTL(KC.C)
-CTV     = KC.LCTL(KC.V)
-CTZ     = KC.LCTL(KC.Z)
-CTI     = KC.LCTL(KC.I)
-CTB     = KC.LCTL(KC.B)
-CTF     = KC.LCTL(KC.F)
-CTENT   = KC.LCTL(KC.ENT)
-CTY     = KC.LCTL(KC.Y)
-SAI     = KC.LSFT(KC.LALT(KC.I))
-CTSH    = KC.LCTL(KC.LSFT)
+ALTF4  = KC.LALT(KC.F4)
+CTA   = KC.LCTL(KC.A)
+CTS   = KC.LCTL(KC.S)
+CTX   = KC.LCTL(KC.X)
+CTC   = KC.LCTL(KC.C)
+CTV   = KC.LCTL(KC.V)
+CTZ   = KC.LCTL(KC.Z)
+CTI   = KC.LCTL(KC.I)
+CTB   = KC.LCTL(KC.B)
+CTF   = KC.LCTL(KC.F)
+CTENT = KC.LCTL(KC.ENT)
+CTY   = KC.LCTL(KC.Y)
+SAI   = KC.LSFT(KC.LALT(KC.I))
+CTSH  = KC.LCTL(KC.LSFT)
 CTTAB   = KC.LCTL(KC.TAB)
 GCLEFT  = KC.LGUI(KC.LCTL(KC.LEFT))
 GCRGHT  = KC.LGUI(KC.LCTL(KC.RGHT))
 GSLEFT  = KC.LGUI(KC.LSFT(KC.LEFT))
 GSRGHT  = KC.LGUI(KC.LSFT(KC.RGHT))
-CAT     = KC.LCTL(KC.ALT(KC.DEL))
+CAT     = KC.LCTL(KC.LALT(KC.DEL))
 MUTET   = KC.LCTL(KC.LSFT(KC.M))
 VIDT    = KC.LCTL(KC.LSFT(KC.O))
 HANDT   = KC.LCTL(KC.LSFT(KC.K))
@@ -98,7 +103,7 @@ keyboard.keymap = [
         STR1,       STR2,       STR1,       STR2,        STR1,      STR2,               KC.TRNS,    KC.TRNS,    KC.TRNS,    KC.TRNS,    KC.TRNS,    KC.TRNS
     ],
 ]
-#print('Hello')
 
 if __name__ == '__main__':
     keyboard.go()
+
