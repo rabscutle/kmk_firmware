@@ -6,6 +6,7 @@ from kmk.scanners.digitalio import MatrixScanner
 import digitalio
 
 class MyKeyboard(KMKKeyboard):
+
     def __init__(self):
         # self.debug_enabled = True
         self.row_pins = (
