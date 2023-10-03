@@ -5,7 +5,5 @@ bootcfg(
   sense=board.D9, # row
   source=board.A1,  # column
   storage=False,
-  usb_id=('KMK Keyboards', 'Dactyl-Manuform a la Rabscutle 2'),
+  usb_id=('Rabscutle, KMK Keyboards, Wylderbuilds, SCREE and   ', 'BLR2'),
 )
-
-print ("booted")
